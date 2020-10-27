@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+  <title>Messenger</title>
+</head>
+<body>
+  <div class="wrapper" id="app">
+    <div class="login-container hidden" id="login">
+      <form class="login" action="POST">
+        <div class="login__header">
+          <div class="login__logo">
+            <img src="./img/logo.png" alt="logo">
+          </div>
+          <h4 class="login__title">Авторизация</h4>
+          <span class="login__text">Введите пожалуйста своё фио и ник для дальнейшей авторизации</span>
+        </div>
+        <div class="login__form">
+          <input id="loginName" data-role="login-name-input" class="login__input" type="text" placeholder="Введите своё фио">
+          <input id="loginNick" data-role="login-nick-input" class="login__input" type="text" placeholder="Введите свой ник">
+          <button id="loginBtn" data-role="login-submit" class="btn" type="submit">Войти</button>
+        </div>
+      </form>
+    </div>
+    <div class="chat-container hidden" id="main" class="hidden">
+      <div class="chat__handlebar">
+        <button class="chat__btn chat__btn--min"></button>
+        <button class="chat__btn chat__btn--max"></button>
+        <button class="chat__btn chat__btn--close"></button>
+      </div>
+      <div class="chat__main">
+        <div class="chat__left">
+          <div class="chat__finder">
+            <button class="burger__btn">
+              <img src="./img/burger.svg" alt="menu">
+            </button>
+            <input class="chat__input" type="text" placeholder="Найти...">
+          </div>
+          <ul class="chat__list">
+            <li class="chat__item">
+              <div class="chat__avatar">
+                <img src="" alt="avatar">
+              </div>
+              <div class="chat__info">
+                <div class="chat__name" id="chatName"></div>
+                <div class="chat__text"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="chat__right">
+          <div class="chat__header">
+            <div class="chat__title">Чат</div>
+            <div class="chat__members">2 участника</div>
+          </div>
+          <div class="chat__chat"></div>
+          <div class="chat__sendbar">
+            <input data-role="message-input" type="text" class="chat__send" placeholder="Введите сообщение...">
+            <button data-role="message-send-button" class="btn submit__btn" type="submit"> Отправить </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+</html>
