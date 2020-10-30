@@ -30,3 +30,5 @@ export default class auth {
     this.element.classList.add('hidden');
   }
 }
+
+console.log('IN AUTH');

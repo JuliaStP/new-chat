@@ -1,48 +1,35 @@
 {
-  "name": "chat",
+  "name": "filter",
   "version": "1.0.0",
-  "description": " ---\r ### JS",
   "main": "index.js",
   "scripts": {
-    "gulp": "cross-env NODE_ENV=dev gulp",
-    "build": "cross-env NODE_ENV=prod gulp build"
+    "build": "webpack --progress --colors",
+    "watch": "webpack-dev-server --progress --colors --open",
+    "start": "npm run watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JuliaStP/chat.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JuliaStP/chat/issues"
-  },
-  "homepage": "https://github.com/JuliaStP/chat#readme",
-  "dependencies": {
-    "jquery": "^3.5.1",
-    "jquery-touchswipe": "^1.6.19",
-    "normalize.css": "^8.0.1"
-  },
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "browser-sync": "^2.26.7",
-    "cross-env": "^7.0.2",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-group-css-media-queries": "^1.2.2",
-    "gulp-if": "^3.0.0",
-    "gulp-rm": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-smile-px2rem": "^0.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-svg-sprite": "^1.5.0",
-    "gulp-svgo": "^2.2.1",
-    "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.14.1"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.7.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
+    "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^3.0.0",
+    "eslint": "^4.19.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "handlebars": "^4.1.2",
+    "handlebars-loader": "^1.7.1",
+    "html-webpack-plugin": "^3.2.0",
+    "puppeteer": "^1.3.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.3",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
   }
 }
