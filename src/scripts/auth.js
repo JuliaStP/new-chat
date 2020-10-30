@@ -9,6 +9,7 @@ export default class auth {
     const authError = element.querySelector('#error');
 
     submitButton.addEventListener('click', () => {
+      
       authError.textContent = '';
 
       const name = loginNameInput.value.trim();
