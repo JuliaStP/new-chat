@@ -5,19 +5,19 @@ export default class auth {
 
     const loginNameInput = element.querySelector('#loginName');
     const loginNickInput = element.querySelector('#loginNick');
-    const submitButton = element.querySelector('#loginBtn');
-    // const loginError = element.querySelector('[data-role=login-error]');
+    const submitButton = document.querySelector('#loginBtn');
+    const authError = element.querySelector('#error');
 
     submitButton.addEventListener('click', () => {
-      // loginError.textContent = '';
+      authError.textContent = '';
 
       const name = loginNameInput.value.trim();
       const nick = loginNickInput.value.trim();
 
       if (!name || !nick) {
-        loginError.textContent = 'Введите данные';
+        authError.textContent = 'Введите данные';
       } else {
-        this.onLogin(name);
+        this.onLogin(name, nick);
       }
     });
   }

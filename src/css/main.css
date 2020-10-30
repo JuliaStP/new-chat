@@ -117,6 +117,7 @@ input {
   margin-bottom: 30px;
   padding: 10px 3px;
   font-weight: 300;
+  position: relative;
 }
 
 .login__input:focus {
@@ -140,6 +141,16 @@ input {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.error {
+  position: absolute;
+  font-size: 16px;
+  font-weight: 300;
+  height: 30px;
+  width: 70%;
+  top: 93%;
+  color: red;
 }
 
 /* CHAT */
