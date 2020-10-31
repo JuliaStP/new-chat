@@ -24,7 +24,7 @@ const server = http.createServer(async (req, res) => {
       } 
 
     } else if (req.url.endsWith('/upload-photo')) {
-      const body = await readBody(req);
+      const body = await readDocument(req);
       const name = body.name.replace(/\.\.\/|\//, '');
       const [, content] = body.image.match(/data:image\/.+?;base64,(.+)/) || [];
       const filePath = path.resolve(__dirname, '../pics', `${name}.png`);
@@ -45,7 +45,7 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-const wsServer = new Index.Server({ server });
+const wsServer = new Server({ server });
 const connections = new Map();
 
 wsServer.on('connection', (socket) => {

@@ -3,13 +3,13 @@ export default class auth {
     this.element = element;
     this.onLogin = onLogin;
 
-    const loginNameInput = element.querySelector('#loginName');
-    const loginNickInput = element.querySelector('#loginNick');
+    const loginNameInput = document.querySelector('#loginName');
+    const loginNickInput = document.querySelector('#loginNick');
     const submitButton = document.querySelector('#loginBtn');
     const authError = element.querySelector('#error');
 
     submitButton.addEventListener('click', () => {
-      
+      debugger;
       authError.textContent = '';
 
       const name = loginNameInput.value.trim();

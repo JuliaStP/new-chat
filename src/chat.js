@@ -10,7 +10,7 @@ import userPhoto from './scripts/userPhoto';
 
 export default class chat {
   constructor() {
-    this.ws = new ws(`ws://${location.host}/chat/ws`,
+    this.ws = new ws(`ws://${location.host}/new-chat/src/scripts/ws`,
       this.onMessage.bind(this));
 
 
@@ -50,12 +50,12 @@ export default class chat {
   }
 
   async onLogin(name) {
-    await this.ws.connect();
-    this.ws.greet(name);
-    this.userWindow.auth.hide();
+    await this.userWindow.auth.hide();
     this.userWindow.main.show();
     this.userWindow.user.set(name);
-    this.userWindow.userPhoto.set(`/chat/pics/${name}.png?t=${Date.now()}`);
+    this.ws.connect();
+    this.ws.greet(name);
+    this.userWindow.userPhoto.set(`/new-chat/src/pics/${name}.png?t=${Date.now()}`);
   }
 
   onMessage({ type, avatar, data }) {
@@ -77,7 +77,7 @@ export default class chat {
       );
 
       for (const avatar of avatars) {
-        avatar.style.backgroundImage = `url(/chat/pics/${
+        avatar.style.backgroundImage = `url(/new-chat/src/pics/${
           data.name
         }.png?t=${Date.now()})`;
       }
